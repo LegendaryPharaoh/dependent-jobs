@@ -21,8 +21,6 @@ jobs:
     - run: pwd #-means its the third indentation
     - name: run
       run: ls
-    - name: run
-      run: ps -aux
   Final_job:
     needs: job_on_macos
     runs-on: ubuntu-latest
