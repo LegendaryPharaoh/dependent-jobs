@@ -17,6 +17,12 @@ jobs:
     needs: [job_on_ubuntu, job_on_windows] #this will mean it depends on something
     runs-on: macos-latest
     name: A job that runs on Mac after first two jobs
+    steps: #we need steps to run
+    - run: pwd #-means its the third indentation
+    - name: run
+      run: ls
+    - name: run
+      run: ps -aux
   Final_job:
     needs: job_on_macos
     runs-on: ubuntu-latest
